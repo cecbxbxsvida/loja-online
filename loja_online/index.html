@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loja Tech</title>
+
+<style>
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.menu a:hover{
+    color: #38bdf8;
+}
+
+/* BANNER */
+
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.banner h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.banner p{
+    font-size: 20px;
+}
+
+/* PRODUTOS */
+
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #111827;
+}
+
+.produtos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+/* CARD */
+
+.card{
+    background-color: white;
+    width: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 20px;
+    text-align: center;
+}
+
+.card h2{
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.preco{
+    font-size: 28px;
+    color: #16a34a;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+
+button{
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: linear-gradient(90deg, #1d4ed8, #1e40af);
+    transform: scale(1.05);
+}
+
+/* ETIQUETA */
+
+.tag{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner h1{
+        font-size: 35px;
+    }
+
+    .banner p{
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">Loja Tech</div>
+
+<nav class="menu">
+    <a href="#">Home</a>
+    <a href="#">Produtos</a>
+    <a href="#">Promoções</a>
+    <a href="#">Contato</a>
+</nav>
+
+</header>
+
+<!-- BANNER -->
+
+<section class="banner">
+
+<h1>Tecnologia do Futuro</h1>
+
+<p>Os melhores eletrônicos com os menores preços</p>
+
+</section>
+
+<!-- TÍTULO -->
+
+<h2 class="titulo">Produtos em Destaque</h2>
+
+<!-- PRODUTOS -->
+
+<main class="produtos">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<div class="tag">OFERTA</div>
+
+<img src="Smartphone.webp" alt="Celular">
+
+<div class="card-content">
+
+<h2>Smartphone</h2>
+
+<p class="preco">R$ 1.999,00</p>
+
+<button onclick="comprar('Smartphone')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<div class="tag">NOVO</div>
+
+<img src="Smartphoneee.webp" alt="Relógio">
+
+<div class="card-content">
+
+<h2>Smartwatch</h2>
+
+<p class="preco">R$ 599,00</p>
+
+<button onclick="comprar('Smartwatch')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<div class="tag">TOP</div>
+
+<img src="Fone Bluetooth.webp" alt="Fone">
+
+<div class="card-content">
+
+<h2>Fone Bluetooth</h2>
+
+<p class="preco">R$ 299,00</p>
+
+<button onclick="comprar('Fone Bluetooth')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Loja Tech - Todos os direitos reservados</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function comprar(produto){
+    alert("Você adicionou " + produto + " ao carrinho!");
+}
+
+</script>
+
+</body>
+</html>
